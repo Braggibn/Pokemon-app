@@ -1,0 +1,36 @@
+@import "../../../assets/styles/variables.scss"
+.flex
+    margin: auto
+
+.container
+    max-width: 100%
+    
+    .pokeImage
+        margin: 20px auto
+        width: 500px
+        padding: 20px
+        display: inline-block
+.first
+    border-radius: 15px
+    height: 5px
+    width: 60%
+    background: $black  
+    margin-bottom: 15px
+
+.second
+    border-top-left-radius: 15px !important
+    border-bottom-left-radius: 15px !important
+    height: 5px
+    background: $yellow
+
+@media screen and (max-width:800px)
+.flex
+    margin: auto
+    .container
+        max-width: 90%
+        margin: auto
+        .pokeimage
+            margin: 10px auto
+            width: 100%
+            padding: 10px
+    

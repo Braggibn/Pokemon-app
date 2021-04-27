@@ -1,0 +1,81 @@
+<div class="pokeTitle" >
+    <mat-form-field>
+        <mat-label>Buscar Pokemon</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Buscar Pokemon" #input>
+    </mat-form-field>
+</div>
+  <div class="container">
+    <div class="pokeImage" >
+        <form (ngSubmit)="capturaPokemon()" [formGroup]='capturaPoke'>
+            <article class="card">
+                    <div class="card-body">
+                        <img src="{{pokemonImg}}" alt="" onerror="this.src='../../../../../assets/images/egg.png'; this.onerror='../../../../../assets/images/egg.png';" width="70px" class="card-body-img">
+                        <h1 class="card-body-title">
+                            <mat-form-field>
+                            <input type="text" matInput formControlName="name" #pokemonName >
+                            </mat-form-field>
+                            
+                        </h1>
+                            <input type="text" matInput readonly formControlName="type">
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-footer-social">
+                            <h3>Ataque</h3>
+                                <input matInput readonly formControlName="atack" >
+                        </div>
+                        <div class="card-footer-social">
+                            <h3>Defensa</h3>
+                                <input matInput readonly formControlName="defens">
+                        </div>
+                        <div class="card-footer-social">
+                            <h3>Especial</h3>
+                                <input matInput readonly formControlName="espcial">
+                        </div>
+                    </div>
+                    <div>
+                        <button mat-flat-button color="primary" type="submit">
+                            send
+                        </button>
+                    </div>
+            </article>
+        </form>
+    </div>
+    <div class="pokelist">
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" matSort>
+          
+              <ng-container matColumnDef="position">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> No. </th>
+                <td mat-cell *matCellDef="let row"> {{row.position}} </td>
+              </ng-container>
+              
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="image">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header></th>
+                <td mat-cell *matCellDef="let row"> 
+                    <img src="{{row.image}}" alt="pokemon" width="50" height="50">  
+                </td>
+              </ng-container>
+          
+              
+          
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getRow(row.position)"></tr>
+          
+              <!-- Row shown when there is no matching data. -->
+              <tr class="mat-row" *matNoDataRow>
+                <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+              </tr>
+            </table>
+          
+            <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+          </div>
+    </div>
+  </div>
+  <div></div>
+  <div></div>
+  
