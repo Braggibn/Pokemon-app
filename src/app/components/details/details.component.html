@@ -19,17 +19,13 @@
                         <p>{{oak.atack}}</p>
                     </div>
                     <div class="card-footer-social">
-                        <h3>Defens</h3>
-                        <p>{{oak.defens}}</p>
-                    </div>
-                    <div class="card-footer-social">
                         <h3>Special</h3>
                         <p>{{oak.espcial}}</p>
                     </div>
                 </div>
                 <div class="card-footer">
                     <button mat-flat-button color="warn"  (click)="releasePoke(oak)" >Soltar</button>
-                    <button mat-flat-button color="accent" (click)="healPokemon()" >
+                    <button mat-flat-button color="accent" (click)="healPokemon(oak)" >
                         Heal
                     </button>
                 </div>

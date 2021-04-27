@@ -17,7 +17,7 @@ export class DetailsComponent implements OnInit {
     console.log(this.pokemonOAK)
   }
 
-  healPokemon(){
+  healPokemon(pokemon : IPokemon){
     const herido = this.pokemonOAK.map((items) =>{
       if(items.defens <= 100){
         return {
@@ -28,10 +28,9 @@ export class DetailsComponent implements OnInit {
       return items;
     })
   }
-
+  
   releasePoke(pokemon : IPokemon ){
     this.pokeLista.releasePokemon(pokemon)
-    console.log(this.pokemonOAK)
   }
 
   }

@@ -1,14 +1,8 @@
-export interface Roles {
-    profesor?: boolean;
-    trainer?: boolean;
-}
+export class Usuario {
+    constructor(
+        public uid: string,
+        public nombre: string,
+        public email: string
+    ){}
 
-
-export interface IUser {
-    id?: string;
-    name?: string;
-    email?: string; 
-    password?: string;
-    photoUrl?: string;
-    roles: Roles;
 }

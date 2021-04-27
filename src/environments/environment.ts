@@ -4,7 +4,15 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'https://pokeapi.co/api/v2'
+  baseUrl: 'https://pokeapi.co/api/v2',
+  firebase : {
+    apiKey: "AIzaSyAxWwYfw41veE5nYSuLfC2bqCZaFTaKlnU",
+    authDomain: "prueba22abril.firebaseapp.com",
+    projectId: "prueba22abril",
+    storageBucket: "prueba22abril.appspot.com",
+    messagingSenderId: "573542364833",
+    appId: "1:573542364833:web:a209453c099676d62f62e0"
+  },
 };
 
 /*

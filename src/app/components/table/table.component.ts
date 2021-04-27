@@ -91,10 +91,12 @@ export class TableComponent implements OnInit {
           defens: this.defens,
           espcial: this.special
         })
+        console.log(this.pokemonList)
       },
       err =>{
         console.log(err)
       }
+      
     )
     this.pokemonName.nativeElement.focus();
 

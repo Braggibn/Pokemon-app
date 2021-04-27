@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "prueba22abril": {
+      "hosting": {
+        "prueba22Abril": [
+          "prueba22abril"
+        ]
+      }
+    }
+  }
+}

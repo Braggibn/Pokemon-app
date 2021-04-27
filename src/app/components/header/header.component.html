@@ -1,5 +1,34 @@
 <mat-toolbar>
     <mat-toolbar-row>
-        <img src="../../../assets/images/pokeball.png" alt="pokedex" width="40" height="40" (click)="home">
+        <nav class="navbar navbar-expand-lg">
+          <div class="home">
+            <img src="../../../assets/images/pokeball.png" alt="pokedex" width="40" height="40" (click)="home">
+            <a class="navbar-brand" href="#">PokeAventura</a>
+          </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            
+              <ul class="nav justify-content-end">
+                <li class="nav-item active">
+                  <a class="nav-link" [routerLink]="['/']">Home</a>
+                </li>
+                <li class="nav-item ">
+                   <a class="nav-link" [routerLink]="['login']" href="#">Login</a>
+                  </li>
+                  <li class="nav-item ">
+                    <a class="nav-link" [routerLink]="['pokeCare']" href="#">PokeCare</a>
+                   </li>
+                <li class="nav-item">
+                  <a class="nav-link" (click)="logut()" href="#">Logout</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" [routerLink]="['register']" >Registrar</a>
+                </li>
+              </ul>
+          </nav>
+        <div>
+        </div>
     </mat-toolbar-row>
 </mat-toolbar>
